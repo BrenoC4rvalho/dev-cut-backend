@@ -1,6 +1,6 @@
-package com.example.devcut.model.entities;
+package com.breno.devcut.model.entities;
 
-import com.example.devcut.enums.Role;
+import com.breno.devcut.enums.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

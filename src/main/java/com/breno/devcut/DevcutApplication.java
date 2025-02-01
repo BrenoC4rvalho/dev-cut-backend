@@ -1,4 +1,4 @@
-package com.example.devcut;
+package com.breno.devcut;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

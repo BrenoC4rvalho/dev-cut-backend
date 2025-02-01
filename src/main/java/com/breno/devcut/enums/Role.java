@@ -1,4 +1,4 @@
-package com.example.devcut.enums;
+package com.breno.devcut.enums;
 
 public enum Role {
     ROLE_ADMIN,

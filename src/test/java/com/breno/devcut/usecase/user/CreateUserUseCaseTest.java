@@ -1,4 +1,4 @@
-package com.breno.devcut.usecase;
+package com.breno.devcut.usecase.user;
 
 import com.breno.devcut.enums.Role;
 import com.breno.devcut.exceptions.UserAlreadyExistsException;
@@ -7,7 +7,6 @@ import com.breno.devcut.model.dto.user.ResponseUserDTO;
 import com.breno.devcut.model.entities.User;
 import com.breno.devcut.repository.UserRepository;
 import com.breno.devcut.security.PasswordEncryptor;
-import com.breno.devcut.usecase.user.CreateUserUseCase;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

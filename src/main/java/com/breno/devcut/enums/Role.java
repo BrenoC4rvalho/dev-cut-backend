@@ -1,6 +1,6 @@
 package com.breno.devcut.enums;
 
 public enum Role {
-    ROLE_ADMIN,
-    ROLE_CLIENT
+    ADMIN,
+    CLIENT
 }

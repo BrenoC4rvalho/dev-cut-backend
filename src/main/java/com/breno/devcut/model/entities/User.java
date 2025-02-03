@@ -7,6 +7,8 @@ import jakarta.validation.constraints.Pattern;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.validator.constraints.Length;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -32,6 +34,9 @@ public class User {
 
     @NotBlank(message = "The phone field cannot be empty.")
     private String phone;
+
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Appointment> appointments = new ArrayList<>();
 
     public User() {}
 

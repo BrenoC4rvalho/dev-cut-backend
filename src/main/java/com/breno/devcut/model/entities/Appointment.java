@@ -18,8 +18,9 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    // relate to user / client
-    private UUID clientId;
+    @ManyToOne
+    @JoinColumn(name = "client_id", nullable = false)
+    private User client;
 
     @NotNull(message = "The appointment date cannot be null.")
     private LocalDateTime dateTime;
@@ -30,9 +31,9 @@ public class Appointment {
     @Length(max = 200, message = "The notes field cannot be greater than 200.")
     private String notes;
 
-    public Appointment(UUID id, UUID clientId, LocalDateTime dateTime, Status status, String notes) {
+    public Appointment(UUID id, User client, LocalDateTime dateTime, Status status, String notes) {
         this.id = id;
-        this.clientId = clientId;
+        this.client = client;
         this.dateTime = dateTime;
         this.status = status;
         this.notes = notes;
@@ -49,12 +50,12 @@ public class Appointment {
         this.id = id;
     }
 
-    public UUID getClientId() {
-        return clientId;
+    public User getClient() {
+        return client;
     }
 
-    public void setClientId(UUID clientId) {
-        this.clientId = clientId;
+    public void setClient(User client) {
+        this.client = client;
     }
 
     public LocalDateTime getDateTime() {

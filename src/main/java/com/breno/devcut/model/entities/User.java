@@ -28,7 +28,7 @@ public class User {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private Role role = Role.CLIENT;
+    private Role role = Role.   CLIENT;
 
     @NotBlank(message = "The phone field cannot be empty.")
     private String phone;
